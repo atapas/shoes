@@ -5,9 +5,9 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Shoes`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `The one stop shop for your shoes and footwear needs.`,
     author: `@tapasadhikary`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://shoes.io/`,
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
