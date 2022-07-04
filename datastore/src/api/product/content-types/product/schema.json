@@ -43,11 +43,6 @@
       "target": "api::category.category",
       "inversedBy": "products"
     },
-    "Custom_field": {
-      "type": "component",
-      "repeatable": true,
-      "component": "custom.custom-field"
-    },
     "status": {
       "type": "enumeration",
       "enum": [
@@ -61,7 +56,9 @@
       "type": "integer"
     },
     "company": {
-      "type": "string"
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
     }
   }
 }
