@@ -14,6 +14,8 @@
     "gatsby-plugin-react-helmet": "^5.17.0",
     "gatsby-plugin-sharp": "^4.17.0",
     "gatsby-source-filesystem": "^4.17.0",
+    "gatsby-source-strapi": "^2.0.0",
+    "gatsby-transformer-remark": "^5.17.0",
     "gatsby-transformer-sharp": "^4.17.0",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
