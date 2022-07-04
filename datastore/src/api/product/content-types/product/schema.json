@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "float"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "Custom_field": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.custom-field"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "available",
+        "out-of-stock"
+      ],
+      "default": "available",
+      "required": true
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "company": {
+      "type": "string"
+    }
+  }
+}

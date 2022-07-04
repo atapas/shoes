@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.0.0",
+    "lodash.set": "^4.3.2",
+    "mime-types": "^2.1.27",
+    "@strapi/strapi": "4.2.2",
+    "@strapi/plugin-users-permissions": "4.2.2",
+    "@strapi/plugin-i18n": "4.2.2",
+    "better-sqlite3": "7.4.6"
+  },
+  "name": "datastore",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "9c64de13-8b42-4e36-bc29-bc8d4d9402b1",
+    "template": "ecommerce"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
