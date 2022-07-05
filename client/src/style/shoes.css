@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.shoe-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shoe-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 15rem;
+  height: 15rem;
+  margin: 1.2rem;
+}
+
+.img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+
+.shoe-card .img-container > IMG {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  resize: both;
+}
+
+.shoe-card:hover .img-container {
+  transform: translate(-1rem, -1rem);
+}
+
+.shoe-card:hover .details {
+  transform: translate(1rem, 1rem);
+}
+
+.shoe-card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    display: flex;
+    background-color: #fff;
+    z-index: 1;
+    align-items: flex-end;
+    transition: 0.5s ease-in-out;
+    line-height: 1rem;
+}
+
+.shoe-card .details h2 {
+  display: block;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 500;
+}
+
+
+
