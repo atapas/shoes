@@ -11,7 +11,7 @@
 
 body {
   min-height: 100vh;
-  background-color: #000000;
+  background-color: rgb(3, 28, 34);
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
 }
@@ -19,6 +19,24 @@ body {
 a {
   text-decoration: none;
   color: #ffffff;
+}
+
+header {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282d2e;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+header .logo {
+  font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 0.5rem;
+    
 }
 
 .shoe-list {
