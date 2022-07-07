@@ -57,7 +57,7 @@ header .logo {
   margin: 1.2rem;
 }
 
-.img-container {
+.shoe-card .img-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -104,5 +104,17 @@ header .logo {
   font-weight: 500;
 }
 
+.shoe-details {
+  padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
 
+.shoe-details .cover > IMG{
+  width: 30rem;
+    height: 100%;
+
+}
 

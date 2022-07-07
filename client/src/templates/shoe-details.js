@@ -6,9 +6,16 @@ export default function ShoeDetails({ data }) {
   const shoe = data.strapiProduct
   return (
     <Layout>
-      <div>
-        <h1>{shoe.title}</h1>
-      </div>
+      <div className="shoe-details">
+        <div className="cover">
+          <img src={`${process.env.GATSBY_STRAPI_API_URL}${shoe.image.url}`} alt={shoe.title} />
+        </div>
+        <div className="info">
+          <h2>{shoe.title}</h2>
+          <p>{shoe.description}</p>
+          <p>${shoe.price}</p>
+        </div>
+      </div>  
     </Layout>
   )
 }
