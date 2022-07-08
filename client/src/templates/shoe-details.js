@@ -25,7 +25,7 @@ export default function ShoeDetails({ data }) {
 
           <div className="info-body">
             <p>{shoe.description}</p>
-            <span>${shoe.price} per unit.</span> { ' - '}
+            <span>${shoe.price} per unit</span> { ' - '}
             <>
               {
                 shoe.stock > 0 ?

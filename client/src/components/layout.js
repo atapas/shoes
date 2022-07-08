@@ -26,8 +26,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div>
-        <main>{children}</main>
+      <div className="container">
+        <main className="content">{children}</main>
         <footer>
           © {new Date().getFullYear()} &middot; Built with ❤️ by <a href="https://www.tapasadhikary.com">Tapas Adhikary</a>
         </footer>
