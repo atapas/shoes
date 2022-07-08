@@ -1,9 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React, {useState} from "react"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default function ShoeDetails({ data }) {
   const shoe = data.strapiProduct
+  const [quantity, setQuantity] = useState(1)
   return (
     <Layout>
       <div className="shoe-details">
@@ -11,9 +12,55 @@ export default function ShoeDetails({ data }) {
           <img src={`${process.env.GATSBY_STRAPI_API_URL}${shoe.image.url}`} alt={shoe.title} />
         </div>
         <div className="info">
-          <h2>{shoe.title}</h2>
-          <p>{shoe.description}</p>
-          <p>${shoe.price}</p>
+          <div className="info-heading">
+            <h2>{shoe.title}</h2> 
+            <Link to={`/category/${shoe.categories[0].name}`}>
+              <span>{shoe.categories[0].name}</span>
+            </Link> { ' '}
+            from {' '}
+            <Link to={`/company/${shoe.company.name}`}>
+              {shoe.company.name}
+            </Link>
+          </div>
+
+          <div className="info-body">
+            <p>{shoe.description}</p>
+            <span>${shoe.price} per unit.</span> { ' - '}
+            <>
+              {
+                shoe.stock > 0 ?
+                  <span>{shoe.stock} In Stock</span> :
+                  <span>Out of Stock</span>
+              }
+            </>
+          </div>
+
+          <div className="info-purchase">
+            {
+              shoe.stock > 0 ?
+              <>
+                <p>
+                  I want to purchase {' '}
+                  <input 
+                    type="number" 
+                    min="1" 
+                    max={shoe.stock} 
+                    defaultValue="1" 
+                    value={quantity}
+                    onChange={(e) => setQuantity(e.target.value)}
+                    /> {' '} unit.
+                </p>
+                <p className="price">Total Price: ${quantity * shoe.price}</p>
+                <button className="btn btn-primary">Add to Cart</button>
+              </> :
+              <>
+                <p>OOPS!!! That's gone. We will let you know when the fresh stock is available.</p>
+                <button className="btn btn-secondary">Notify Me!</button>
+              </>
+            }
+            
+          </div>
+          
         </div>
       </div>  
     </Layout>

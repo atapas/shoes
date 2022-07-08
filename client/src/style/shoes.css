@@ -8,12 +8,15 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+html {
+  overflow: auto;
+}
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   background-color: rgb(3, 28, 34);
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -23,20 +26,59 @@ a {
 
 header {
   display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #282d2e;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin: 0 0 0.5rem 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282d2e;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin: 0 0 0.5rem 0;
 }
 
 header .logo {
   font-size: 2rem;
-    font-weight: 500;
-    color: #ffffff;
-    padding: 0.5rem;
-    
+  font-weight: 500;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+footer {
+  width: 100%;
+  padding: 0.3rem;
+  background-color: #282d2e;
+  text-align: center;
+}
+
+footer > a {
+  color: #1af41a;
+  text-decoration: underline;
+}
+
+.btn {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn.btn-primary {
+  background-color: #40ee10;
+  color: #000000;
+}
+
+.btn.btn-primary:hover {
+  background-color: #70e007;
+  color: #000000;
+}
+
+.btn.btn-secondary {
+  background-color: #ffffff;
+  color: #282d2e;
+}
+
+.btn.btn-secondary:hover {
+  background-color: #282d2e;
+  color: #ffffff;
 }
 
 .shoe-list {
@@ -72,6 +114,7 @@ header .logo {
   height: 15rem;
   object-fit: cover;
   resize: both;
+  border-radius: 10px;
 }
 
 .shoe-card:hover .img-container {
@@ -83,18 +126,19 @@ header .logo {
 }
 
 .shoe-card .details {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0.5rem;
-    display: flex;
-    background-color: #fff;
-    z-index: 1;
-    align-items: flex-end;
-    transition: 0.5s ease-in-out;
-    line-height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  display: flex;
+  background-color: #fff;
+  z-index: 1;
+  align-items: flex-end;
+  transition: 0.5s ease-in-out;
+  line-height: 1rem;
+  border-radius: 10px;
 }
 
 .shoe-card .details h2 {
@@ -106,15 +150,80 @@ header .logo {
 
 .shoe-details {
   padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+  display: flex;
+  justify-content: space-around;
 }
 
-.shoe-details .cover > IMG{
+.shoe-details .cover {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.shoe-details .cover > IMG {
   width: 30rem;
-    height: 100%;
-
+  height: 30rem;
+  border-radius: 50%;
 }
 
+.shoe-details .info-heading {
+  margin-bottom: 1rem;
+}
+
+.shoe-details .info-heading > a {
+  color: #1af41a;
+  text-decoration: underline;
+}
+
+.shoe-details .info-heading > H2 {
+  font-size: 3rem;
+}
+
+.shoe-details .info-body > P {
+  margin: 0;
+}
+
+.shoe-details .info-body > SPAN {
+  font-size: 1.5rem;
+}
+
+.shoe-details .info-purchase {
+  margin: 2rem 0 0 0;
+  border: 1px solid #4a4545;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.shoe-details .info-purchase .price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.shoe-details .info-purchase INPUT {
+  border: 1px solid #ececec;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .shoe-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .shoe-details .cover > IMG {
+    width: 20rem;
+    height: 20rem;
+  }
+}
