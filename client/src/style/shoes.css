@@ -164,6 +164,7 @@ footer > a {
   padding: 1rem;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .shoe-details .cover {
@@ -222,6 +223,13 @@ footer > a {
   padding: 5px;
   border-radius: 3px;
   font-size: 1rem;
+}
+
+.shoe-filtered-list H2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1af41a;
+  margin: 0 0 1rem 1rem;
 }
 
 @media only screen and (max-width: 900px) {

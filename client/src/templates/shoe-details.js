@@ -14,11 +14,11 @@ export default function ShoeDetails({ data }) {
         <div className="info">
           <div className="info-heading">
             <h2>{shoe.title}</h2> 
-            <Link to={`/category/${shoe.categories[0].name}`}>
+            <Link to={`/category/${shoe.categories[0].slug}`}>
               <span>{shoe.categories[0].name}</span>
             </Link> { ' '}
             from {' '}
-            <Link to={`/company/${shoe.company.name}`}>
+            <Link to={`/company/${shoe.company.slug}`}>
               {shoe.company.name}
             </Link>
           </div>
@@ -45,10 +45,9 @@ export default function ShoeDetails({ data }) {
                     type="number" 
                     min="1" 
                     max={shoe.stock} 
-                    defaultValue="1" 
                     value={quantity}
                     onChange={(e) => setQuantity(e.target.value)}
-                    /> {' '} unit.
+                    /> {' '} unit
                 </p>
                 <p className="price">Total Price: ${quantity * shoe.price}</p>
                 <button className="btn btn-primary">Add to Cart</button>
@@ -77,9 +76,11 @@ export const query = graphql`
       stock
       categories {
         name
+        slug
       }
       company {
         name
+        slug
       }
       description
       image {
