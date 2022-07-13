@@ -12,6 +12,10 @@ The shoe details include the brand, style, price, and description. You can add t
 
 ![Shoe Details](./images/shoe-details.png)
 
+### Many Thanks to all the `Stargazers` who has supported this project with stars(⭐)
+
+[![Stargazers repo roster for @atapas/shoes](https://reporoster.com/stars/atapas/shoes)](https://github.com/atapas/shoes/stargazers)
+
 ## How to run the app locally?
 
 To run the app locally,
