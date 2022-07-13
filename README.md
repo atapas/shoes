@@ -34,8 +34,10 @@ To run the app locally,
 
 It is and Open Source project. You can [contribute](CONTRIBUTING.md) to the project. Don't worry if you do not know much about Gatsby or Strapi. A basic knowedge on the ReactJS will help you to get started.
 
-You can reach out to me on [Twitter](https://twitter.com/tapasadhikary).
+You can reach out to me on 
 
+- [Twitter](https://twitter.com/tapasadhikary)
+- [Showwcase](https://www.showwcase.com/atapas398)
 
 
 
