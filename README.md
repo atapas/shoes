@@ -12,7 +12,7 @@ The shoe details include the brand, style, price, and description. You can add t
 
 ![Shoe Details](./images/shoe-details.png)
 
-### Many Thanks to all the `Stargazers` who has supported this project with stars(⭐)
+### Many Thanks to all the `Stargazers` who have supported this project with stars(⭐)
 
 [![Thanks to all stargazers](https://git-lister.onrender.com/api/stars/atapas/shoes?limit=15)](https://github.com/atapas/shoes/stargazers)
 
