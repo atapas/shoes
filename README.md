@@ -32,7 +32,7 @@ To run the app locally,
 
 ## Contribute and Learn More
 
-It is and Open Source project. You can [contribute](CONTRIBUTING.md) to the project. Don't worry if you do not know much about Gatsby or Strapi. A basic knowedge on the ReactJS will help you to get started.
+It is and Open Source project. You can [contribute](CONTRIBUTING.md) to the project. Don't worry if you do not know much about Gatsby or Strapi. A basic knowledge on the ReactJS will help you to get started.
 
 You can reach out to me on 
 
