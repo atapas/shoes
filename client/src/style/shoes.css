@@ -232,6 +232,24 @@ footer > a {
   margin: 0 0 1rem 1rem;
 }
 
+.share-button {
+  border-radius: 15px;
+  outline: none;
+  border: 0;
+  color: white;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.share-container {
+  display: flex;
+  gap: 5px;
+}
+
 @media only screen and (max-width: 900px) {
   .shoe-details {
     padding: 1rem;
